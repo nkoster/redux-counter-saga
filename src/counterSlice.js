@@ -5,6 +5,7 @@ export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
     value: 0,
+    loading: false,
   },
   reducers: {
     increment: (state) => {
@@ -15,9 +16,13 @@ export const counterSlice = createSlice({
     },
     incrementAsync: () => {},
     decrementAsync: () => {},
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
   },
 });
 
-export const { increment, decrement, incrementAsync, decrementAsync } = counterSlice.actions;
+export const { increment, decrement, incrementAsync, decrementAsync, setLoading } = counterSlice.actions;
 export const selectCount = (state) => state.counter.value;
+export const selectLoading = (state) => state.counter.loading;
 export default counterSlice.reducer;

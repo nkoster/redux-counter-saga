@@ -1,15 +1,19 @@
 // src/sagas.js
 import { takeEvery, put, delay } from 'redux-saga/effects';
-import { increment, decrement } from './counterSlice';
+import { increment, decrement, setLoading } from './counterSlice';
 
 function* incrementAsync() {
+    yield put(setLoading(true));
     yield delay(1000);
     yield put(increment());
+    yield put(setLoading(false));
 }
 
 function* decrementAsync() {
+    yield put(setLoading(true));
     yield delay(1000);
     yield put(decrement());
+    yield put(setLoading(false));
 }
 
 export function* watchIncrementAsync() {
