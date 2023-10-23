@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { incrementAsync, decrementAsync, selectCount, selectLoading } from "./counterSlice";
+import { incrementAsync, decrementAsync, selectCount, selectLoading } from "../src/redux/counter/counterSlice";
 import "./App.css";
 
 function App() {

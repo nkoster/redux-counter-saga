@@ -2,13 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
-import counterReducer from "./counterSlice";
-import { watchIncrementAsync, watchDecrementAsync } from "./sagas";
+import counterReducer from "../src/redux/counter/counterSlice";
+import { watchIncrementAsync, watchDecrementAsync } from "../src/redux/counter/sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -31,8 +29,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
