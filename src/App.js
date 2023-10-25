@@ -15,10 +15,17 @@ function App() {
   const loading = useSelector(selectLoading);
   const dispatch = useDispatch();
 
-  const [newData, setNewData] = useState(useSelector((state) => state.data.data));
+  const [newData, setNewData] = useState(
+    useSelector((state) => state.data.data)
+  );
   const data = useSelector((state) => state.data.data);
   const dataLoading = useSelector((state) => state.data.loading);
   const dataError = useSelector((state) => state.data.error);
+
+  function doFetchData() {
+    dispatch(fetchData(newData));
+    setNewData("");
+  }
 
   return (
     <div className="App">
@@ -31,15 +38,18 @@ function App() {
           -
         </button>
         {loading && <p>pls standby...</p>}
-        <input type="text" name="data" value={newData || ''} onChange={e => setNewData(e.target.value)}/>
-        <button
-          disabled={dataLoading}
-          onClick={() => dispatch(fetchData(newData))}
-        >
+        <input
+          type="text"
+          name="data"
+          value={newData || ""}
+          onChange={(e) => setNewData(e.target.value)}
+        />
+        <button disabled={dataLoading || !newData} onClick={doFetchData}>
           fetch data
         </button>
+        {dataLoading && <p>fetching...</p>}
         {dataError && <p>{dataError}</p>}
-        <div>{JSON.stringify(data)}</div>
+        {data && <pre style={{textAlign: 'left', fontSize: 14}}>{JSON.stringify(data, null, 2)}</pre>}
       </header>
     </div>
   );
