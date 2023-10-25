@@ -2,18 +2,6 @@
 
 This project demonstrates a simple counter application using React, Redux Toolkit, and Redux Saga. It showcases how to manage state using slices and handle asynchronous actions with sagas. The application fetches data from an external API using a specified query parameter and displays it along with a counter that can be incremented or decremented asynchronously.
 
-## Project Structure
-
-- `src/` - Source files for the application.
-  - `redux/` - Redux slices and sagas.
-    - `counter/` - Redux slice for managing the counter state.
-      - `counterSlice.js` - Contains the slice for counter state.
-    - `data/` - Redux slice and saga for fetching data from the API.
-      - `dataSlice.js` - Contains the slice for data fetching state.
-      - `dataSagas.js` - Contains the saga for handling data fetching.
-  - `App.js` - Main application component.
-  - `index.js` - Entry point for the application.
-
 ## Getting Started
 
 1. Clone the repository:
@@ -37,6 +25,18 @@ npm start
 - Redux Toolkit
 - Redux Saga
 
+## Project Structure
+
+- `src/` - Source files for the application.
+  - `redux/` - Redux slices and sagas.
+    - `counter/` - Redux slice for managing the counter state.
+      - `counterSlice.js` - Contains the slice for counter state.
+    - `data/` - Redux slice and saga for fetching data from the API.
+      - `dataSlice.js` - Contains the slice for data fetching state.
+      - `dataSagas.js` - Contains the saga for handling data fetching.
+  - `App.js` - Main application component.
+  - `index.js` - Entry point for the application.
+  
 ## License
 
 This project is open-source and available under the MIT License.
