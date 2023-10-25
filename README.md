@@ -6,7 +6,7 @@ This project demonstrates a simple counter application using React, Redux Toolki
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/redux-counter.git
+git clone https://github.com/your-username/redux-counter-saga.git
 cd redux-counter
 npm install
 npm start
