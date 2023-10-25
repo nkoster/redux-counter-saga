@@ -31,12 +31,13 @@ npm start
   - `redux/` - Redux slices and sagas.
     - `counter/` - Redux slice for managing the counter state.
       - `counterSlice.js` - Contains the slice for counter state.
+      - `sagas.js` - Contains the saga for handling counter actions.
     - `data/` - Redux slice and saga for fetching data from the API.
       - `dataSlice.js` - Contains the slice for data fetching state.
-      - `dataSagas.js` - Contains the saga for handling data fetching.
+      - `sagas.js` - Contains the saga for handling data fetching.
   - `App.js` - Main application component.
   - `index.js` - Entry point for the application.
-  
+
 ## License
 
 This project is open-source and available under the MIT License.
