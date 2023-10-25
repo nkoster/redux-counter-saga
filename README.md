@@ -25,18 +25,18 @@ npm start
 ```
 2. Open http://localhost:3000 to view the application in your browser.
 
-3. Usage
+## Usage
 
 - Click the + button to increment the counter asynchronously after a 1-second delay.
 - Click the - button to decrement the counter asynchronously after a 1-second delay.
 - On load, the application fetches data from the API using the query parameter 'aap' and stores it in the Redux state.
 
-2. Technologies Used
+## Technologies Used
 
 - React
 - Redux Toolkit
 - Redux Saga
 
-3. License
+## License
 
 This project is open-source and available under the MIT License.
