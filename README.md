@@ -17,7 +17,7 @@ npm start
 
 - Click the + button to increment the counter asynchronously after a 1-second delay.
 - Click the - button to decrement the counter asynchronously after a 1-second delay.
-- On load, the application fetches data from the API using the query parameter 'aap' and stores it in the Redux state.
+- Click the "fetch data" button to retrieve data from the GitHub API using the input value as a query, and then store it in the Redux state.
 
 ## Technologies Used
 
